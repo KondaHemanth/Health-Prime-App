@@ -5,6 +5,27 @@ if('serviceWorker' in navigator){
         })
 }
 
+var navOpen = () => {
+    var nav = document.getElementsByClassName('nav')[0]
+    nav.style.left = '25%';
+
+    var layer = document.querySelector('.layer')
+    layer.style.display = 'block';
+    layer.style.opacity = '40%';
+    //console.log(layer)
+}
+
+var navClose = () => {
+    var nav = document.getElementsByClassName('nav')[0]
+    nav.style.left = '100%';
+    
+    var layer = document.querySelector('.layer')
+    layer.style.display = 'none';
+    layer.style.opacity = '0%';
+    //console.log(nav)
+}
+
+
 (()=>{var ctx = document.getElementById('myChart').getContext('2d');
 const a='dk';
 var myChart = new Chart(ctx, {
@@ -43,23 +64,3 @@ var myChart = new Chart(ctx, {
         }
     }
 })})();
-
-var navOpen = () => {
-    var nav = document.getElementsByClassName('nav')[0]
-    nav.style.left = '25%';
-
-    var layer = document.querySelector('.layer')
-    layer.style.display = 'block';
-    layer.style.opacity = '40%';
-    //console.log(layer)
-}
-
-var navClose = () => {
-    var nav = document.getElementsByClassName('nav')[0]
-    nav.style.left = '100%';
-    
-    var layer = document.querySelector('.layer')
-    layer.style.display = 'none';
-    layer.style.opacity = '0%';
-    //console.log(nav)
-}
